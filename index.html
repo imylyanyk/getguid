@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<div>
+			<span>
+			</span>
+			<input type="text" id="main">
+				guid
+			</input>
+		</div>
+		<input type="button" value="generate" onclick="get();"/>
+	</body>
+	<script>
+		function guid() {
+		  function s4() {
+			return Math.floor((1 + Math.random()) * 0x10000)
+			  .toString(16)
+			  .substring(1);
+		  }
+		  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+			s4() + '-' + s4() + s4() + s4();
+		}
+		
+		function get() {
+			var r = guid();
+			var e = document.getElementById('main');
+			e.value = r;
+			e.focus();
+			e.select();
+		}
+	</script>
+</html>
